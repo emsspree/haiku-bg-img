@@ -10,7 +10,7 @@ html {
   --s-bord: solid;
   --w-padd-tb: 0;
   --w-padd-lr: 2ch;
-  --height-header: 4.4rem;
+  --height-header: auto;
   --height-main: calc(100vh - var(--height-header));
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
