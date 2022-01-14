@@ -19,23 +19,13 @@ html {
 html,
 body,
 body * {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 100%;
-  line-height: 1;
+  line-height: 1.5;
   word-break: normal;
   overflow-wrap: normal;
   hyphens: manual;
-}
-
-header p {
-  font-size: 1.125rem;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: -0.0675em;
 }
 
 html,
@@ -101,19 +91,6 @@ main {
   padding: 0 var(--w-padd-lr);
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-content: center;
-  align-items: center;
-  width: calc( 100% - ( 2 * var(--w-padd-lr)));
-  height: var(--height-header);
-  border-color: var(--c-bord);
-  border-style: none;
-  border-width: 0;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -152,9 +129,18 @@ main>div.canvas {
   overflow-x: auto;
 }
 
-canvas {
-  margin: 0 auto;
-  background: url('./testbild.png');
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  width: calc( 100% - ( 2 * var(--w-padd-lr)));
+  height: var(--height-header);
+  padding: 2rem var(--w-padd-lr) 1rem;
+  border-color: var(--c-bord);
+  border-style: none;
+  border-width: 0;
 }
 
 header * {
@@ -165,12 +151,32 @@ header * {
 }
 
 header h1 {
-  margin-block-end: 0.333rem;
+  margin-block-end: 1rem;
+  font-size: 2.75rem;
+  font-weight: 500;
+  font-weight: 200;
+  letter-spacing: -0.05em;
+  line-height: 1.0;
+}
+
+header h1 sup {
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
+header p {
+  font-size: 1.125rem;
+}
+
+canvas {
+  margin: 0 auto;
+  background: url('./testbild.png');
 }
 
 fieldset {
   margin-inline-start: 0;
   margin-inline-end: 1ch;
+  margin-block-start: 1rem;
   margin-block-end: 0;
   padding-block-start: 0;
   padding-block-end: 8px;
@@ -233,10 +239,11 @@ legend>span {
 label {
   position: relative;
   z-index: 2;
-  margin-inline-end: 0.5ch;
+  /* margin-inline-end: 0.5ch; */
 }
 
-label:first-of-type::before {
+label::before {
+  /* :first-of-type */
   content: '\2006';
 }
 
