@@ -175,6 +175,10 @@ p {
   font-size: 1.125rem;
 }
 
+sup {
+  font-size: 0.5em;
+}
+
 canvas {
   margin: 0 auto;
   background: url('./testbild.png');
