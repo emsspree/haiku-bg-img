@@ -19,7 +19,7 @@ html {
 html,
 body,
 body * {
-  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 100%;
   line-height: 1.5;
@@ -164,7 +164,14 @@ header h1 sup {
   font-weight: 300;
 }
 
-header p {
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+p {
   font-size: 1.125rem;
 }
 
