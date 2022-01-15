@@ -72,25 +72,25 @@
   }
 
   function changedWidth() {
-    C.group('Width');
+    // C.group('Width');
     let ar = Logo.aspectRatio;
     let w = Math.round(Controls.Width.value);
     let h = (Math.round(w / ar) * ar) / ar;
     w = (h * ar);
     Canvas.width = w; // = Controls.Width.value
     Canvas.height = Controls.Height.value = h;
-    C.groupEnd();
+    // C.groupEnd();
     paintCanvas();
   }
 
   function changedHeight() {
-    C.group('Height');
+    // C.group('Height');
     let ar = Logo.aspectRatio;
     let h = Math.round(Controls.Height.value);
     let w = h * ar;
     Canvas.width = Controls.Width.value = w;
     Canvas.height = h; // = Controls.Height.value
-    C.groupEnd();
+    // C.groupEnd();
     paintCanvas();
   }
 
