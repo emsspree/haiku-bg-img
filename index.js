@@ -50,8 +50,10 @@
     downloadA.dispatchEvent(
       new MouseEvent('click', { view: window, bubbles: true, cancelable: true, ctrlKey: false, altKey: false, shiftKey: false, metaKey: false, button: 0, buttons: 1, })
     );
-    SH.textContent = 'Downloading…';
-    setTimeout(() => { SH.textContent = 'Click on the image to download'; }, 600);
+    // SH.textContent = 'Downloading…';
+    SH.textContent = SH.dataset.textDl;
+    // setTimeout(() => { SH.textContent = 'Click on the image to download'; }, 600);
+    setTimeout(() => { SH.textContent = SH.dataset.text; }, 600);
     // C.groupEnd();
   }
 
@@ -169,6 +171,7 @@
       if (prepairCanvas()) {
         if (prepairControls()) {
           paintCanvas();
+          SH.textContent = SH.dataset.text;
         }
       }
     }
