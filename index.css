@@ -181,7 +181,7 @@ sup {
 
 canvas {
   margin: 0 auto;
-  background: url('./testbild.png');
+  cursor: copy;
 }
 
 fieldset {
